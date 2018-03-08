@@ -3,7 +3,7 @@
         "API_PROJECT_NAME":     "",
         "API_KEY":              "",
         "API_KEY_SUBSCRIBE":    "",
-        "API_KEY_ÈPUBLISH":     "",
+        "API_KEY_PUBLISH":      "",
         "SYSTEM_HOSTNAME":      "",
         "SYSTEM_DNS_SERVERS": [
                 "8.8.8.8",
