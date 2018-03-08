@@ -1,0 +1,34 @@
+{
+        "API_USER_NAME":        "",
+        "API_PROJECT_NAME":     "",
+        "API_KEY":              "",
+        "API_KEY_SUBSCRIBE":    "",
+        "API_KEY_ÈPUBLISH":     "",
+        "SYSTEM_HOSTNAME":      "",
+        "SYSTEM_DNS_SERVERS": [
+                "8.8.8.8",
+                "8.8.4.4"
+        ],
+        "SYSTEM_NTP_SERVERS": [
+                "time1.google.com",
+                "time2.google.com"
+        ],
+        "SYSTEM_MANAGER_PORT":  0,
+        "SYSTEM_LOG_STORAGE":   "persistent",
+        "SYSTEM_LOG_LEVEL":     "",
+        "SYSTEM_LOG_MAX":       "",
+        "SYSTEM_LOG_COMPRESS":  "",
+        "SYSTEM_LOG_SEAL":      "",
+
+        "RUNTIME_WATCHDOG_SEC": "",
+        "SHUTDOWN_WATCHDOG_SEC":        "",
+        "WATCHDOG_DEVICE":      "",
+
+
+        "API_ENDPOINT":         "",
+        "API_USER_ID":          "",
+        "API_PROJECT_ID":       "",
+        "API_PROJECT_DEVICE_TYPE":      "",
+
+        "API_DEVICE_UUID":      ""
+}
