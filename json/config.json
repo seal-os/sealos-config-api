@@ -20,6 +20,8 @@
         "SYSTEM_LOG_COMPRESS":  "",
         "SYSTEM_LOG_SEAL":      "",
 
+        "KERNEL_BOOT_ARGS":     "",
+
         "RUNTIME_WATCHDOG_SEC": "",
         "SHUTDOWN_WATCHDOG_SEC":        "",
         "WATCHDOG_DEVICE":      "",

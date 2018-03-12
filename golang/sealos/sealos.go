@@ -23,6 +23,8 @@ type APISealOSConfig struct {
         System_Log_Compress     string  `json:"SYSTEM_LOG_COMPRESS"`
         System_Log_Seal         string  `json:"SYSTEM_LOG_SEAL"`
 
+        Kernel_Boot_Args        string  `json:"KERNEL_BOOT_ARGS"`
+
         Runtime_Watchdog_Sec    string  `json:"RUNTIME_WATCHDOG_SEC"`
         Shutdown_Watchdog_Sec   string  `json:"SHUTDOWN_WATCHDOG_SEC"`
         Watchdog_Device         string  `json:"WATCHDOG_DEVICE"`
