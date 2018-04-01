@@ -40,6 +40,11 @@ type APISealOSConfig struct {
         Api_Device_UUID         string  `json:"API_DEVICE_UUID"`
 }
 
+type APISealOSActionRequest struct {
+        Action          string          `json:"Action"`
+        Command         string          `json:"Command"`
+}
+
 type APISealOSStatusRequest struct {
         Action          string          `json:"Action"`
 }
