@@ -39,3 +39,16 @@ type APISealOSConfig struct {
         /* This Should be the same as /etc/machine-id file */
         Api_Device_UUID         string  `json:"API_DEVICE_UUID"`
 }
+
+type ApiSealOSLogsRequest struct {
+        Action          string          `json:"Action"`
+        Command         string          `json:"Command"`
+        Format          string          `json:"format,omitempty"`
+        Publisher       interface{}     `json:"publisher,omitempty"`
+}
+
+type ApiSealOSLogsResponse struct {
+        Api_Device_UUID         string  `json:"API_DEVICE_UUID"`
+        Format                  string  `json:"format,omitempty"`
+        Logs                    []byte  `json:"logs,omitempty"`
+}
