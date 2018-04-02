@@ -41,12 +41,14 @@ type APISealOSConfig struct {
 }
 
 type APISealOSActionRequest struct {
-        Action          string          `json:"Action"`
-        Command         string          `json:"Command"`
+        ID              string          `json:"id,omitempty"`
+        Action          string          `json:"action"`
+        Command         string          `json:"command,omitempty"`
 }
 
 type APISealOSStatusRequest struct {
-        Action          string          `json:"Action"`
+        ID              string          `json:"id,omitempty"`
+        Action          string          `json:"action"`
 }
 
 type APISealOSStatusResponse struct {
