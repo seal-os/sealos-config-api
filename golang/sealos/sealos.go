@@ -41,30 +41,31 @@ type APISealOSConfig struct {
 }
 
 type APISealOSActionRequest struct {
-        ID              string          `json:"id,omitempty"`
-        Action          string          `json:"action"`
-        Command         string          `json:"command,omitempty"`
+        ID                      string          `json:"id,omitempty"`
+        Action                  string          `json:"action"`
+        Command                 string          `json:"command,omitempty"`
 }
 
 type APISealOSStatusRequest struct {
-        ID              string          `json:"id,omitempty"`
-        Action          string          `json:"action"`
+        Api_Device_UUID         string          `json:"API_DEVICE_UUID,omitempty"`
+        Action                  string          `json:"action"`
 }
 
 type APISealOSStatusResponse struct {
-        Api_Device_UUID         string  `json:"API_DEVICE_UUID"`
-        Api_Device_Status       string  `json:"API_DEVICE_STATUS"`
+        Api_Device_UUID         string          `json:"API_DEVICE_UUID"`
+        Api_Device_Status       string          `json:"API_DEVICE_STATUS"`
 }
 
 type APISealOSLogsRequest struct {
-        Action          string          `json:"Action"`
-        Command         string          `json:"Command"`
-        Format          string          `json:"format,omitempty"`
-        Publisher       interface{}     `json:"publisher,omitempty"`
+        Api_Device_UUID         string          `json:"API_DEVICE_UUID"`
+        Action                  string          `json:"action"`
+        Command                 string          `json:"command,omitempty"`
+        Format                  string          `json:"format,omitempty"`
+        Publisher               interface{}     `json:"publisher,omitempty"`
 }
 
 type APISealOSLogsResponse struct {
-        Api_Device_UUID         string  `json:"API_DEVICE_UUID"`
-        Format                  string  `json:"format,omitempty"`
-        Logs                    []byte  `json:"logs,omitempty"`
+        Api_Device_UUID         string          `json:"API_DEVICE_UUID"`
+        Format                  string          `json:"format,omitempty"`
+        Logs                    []byte          `json:"logs,omitempty"`
 }
