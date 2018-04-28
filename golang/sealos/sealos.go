@@ -4,6 +4,11 @@
 
 package sealos
 
+const (
+        SealOSManagerPath       = "/usr/lib/sealos-manager/"
+        SealOSFactoryPath       = "/usr/lib/sealos-manager/factory/"
+)
+
 type APISealOSConfig struct {
         Api_User_Name           string  `json:"API_USER_NAME"`
         Api_Project_Name        string  `json:"API_PROJECT_NAME"`
