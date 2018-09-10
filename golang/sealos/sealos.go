@@ -10,7 +10,7 @@ const (
 )
 
 type APISealOSConfig struct {
-        Api_User_Name           string  `json:"API_USER_NAME"`
+        Api_User_Email          string  `json:"API_USER_EMAIL"`
         Api_Project_Name        string  `json:"API_PROJECT_NAME"`
         Api_Device_Name         string  `json:"API_DEVICE_NAME"`
         Api_Key                 string  `json:"API_KEY"`
