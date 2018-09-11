@@ -13,7 +13,7 @@ type APISealOSConfig struct {
         Api_User_Email          string  `json:"API_USER_EMAIL"`
         Api_Project_Name        string  `json:"API_PROJECT_NAME"`
         Api_Device_Name         string  `json:"API_DEVICE_NAME"`
-        Api_Key                 string  `json:"API_KEY"`
+        Api_Key_Devices         string  `json:"API_KEY_DEVICES"`
         Api_Key_Subscribe       string  `json:"API_KEY_SUBSCRIBE"`
         Api_Key_Publish         string  `json:"API_KEY_PUBLISH"`
 
