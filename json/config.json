@@ -27,7 +27,7 @@
         "WATCHDOG_DEVICE":      "",
 
 
-        "API_ENDPOINT":         "",
+        "API_ENDPOINT_DEVICES": "",
         "API_USER_ID":          "",
         "API_PROJECT_ID":       "",
         "API_PROJECT_DEVICE_TYPE":      "",

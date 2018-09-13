@@ -37,7 +37,7 @@ type APISealOSConfig struct {
 
 
         /* Internal configuration */
-        Api_Endpoint            string  `json:"API_ENDPOINT"`
+        Api_Endpoint_Devices    string  `json:"API_ENDPOINT_DEVICES"`
         Api_User_Id             string  `json:"API_USER_ID"`
         Api_Project_Id          string  `json:"API_PROJECT_ID"`
         Api_Project_Device_Type string  `json:"API_PROJECT_DEVICE_TYPE"`
