@@ -13,6 +13,13 @@
                 "time1.google.com",
                 "time2.google.com"
         ],
+        "SYSTEM_NETWORK": {
+                "WIFI": {
+                        "SSID": "",
+                        "PASSWORD": "",
+                        "SECURITY": ""
+                }
+        },
         "SYSTEM_MANAGER_PORT":  0,
         "SYSTEM_LOG_STORAGE":   "persistent",
         "SYSTEM_LOG_LEVEL":     "",
