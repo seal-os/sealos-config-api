@@ -37,7 +37,7 @@
         "API_ENDPOINT_DEVICES": "",
         "API_USER_ID":          "",
         "API_PROJECT_ID":       "",
-        "API_PROJECT_DEVICE_TYPE":      "",
+        "API_PROJECT_DEVICE_ARCH":      "",
 
         "API_DEVICE_UUID":      ""
 }
