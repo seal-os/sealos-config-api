@@ -9,6 +9,16 @@ const (
         SealOSFactoryPath       = "/usr/lib/sealos-manager/factory/"
 )
 
+type APIWifi struct {
+        SSID            string                  `json:"SSID"`
+        Password        string                  `json:"PASSWORD"`
+        Security        string                  `json:"SECURITY"`
+}
+
+type APISystemNetwork struct {
+        Wifi            APIWifi                 `json:"WIFI"`
+}
+
 type APISealOSConfig struct {
         Api_User_Email          string  `json:"API_USER_EMAIL"`
         Api_Project_Name        string  `json:"API_PROJECT_NAME"`
@@ -17,10 +27,11 @@ type APISealOSConfig struct {
         Api_Key_Subscribe       string  `json:"API_KEY_SUBSCRIBE"`
         Api_Key_Publish         string  `json:"API_KEY_PUBLISH"`
 
-
         System_Hostname         string  `json:"SYSTEM_HOSTNAME"`
         System_Dns_Servers      []string        `json:"SYSTEM_DNS_SERVERS"`
         System_Ntp_Servers      []string        `json:"SYSTEM_NTP_SERVERS"`
+        System_Network          APISystemNetwork        `json:"SYSTEM_NETWORK"`
+
         System_Manager_Port     int     `json:"SYSTEM_MANAGER_PORT"`
         System_Log_Storage      string  `json:"SYSTEM_LOG_STORAGE"`
 
@@ -40,7 +51,7 @@ type APISealOSConfig struct {
         Api_Endpoint_Devices    string  `json:"API_ENDPOINT_DEVICES"`
         Api_User_Id             string  `json:"API_USER_ID"`
         Api_Project_Id          string  `json:"API_PROJECT_ID"`
-        Api_Project_Device_Type string  `json:"API_PROJECT_DEVICE_TYPE"`
+        Api_Project_Device_Arch string  `json:"API_PROJECT_DEVICE_ARCH"`
 
         /* This Should be the same as /etc/machine-id file */
         Api_Device_UUID         string  `json:"API_DEVICE_UUID"`
