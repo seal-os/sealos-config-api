@@ -24,8 +24,8 @@ type APISealOSConfig struct {
         Api_Project_Name        string  `json:"API_PROJECT_NAME"`
         Api_Device_Name         string  `json:"API_DEVICE_NAME"`
         Api_Key_Devices         string  `json:"API_KEY_DEVICES"`
-        Api_Key_Subscribe       string  `json:"API_KEY_SUBSCRIBE"`
-        Api_Key_Publish         string  `json:"API_KEY_PUBLISH"`
+        Api_Key_Subscribe_Events        string  `json:"API_KEY_SUBSCRIBE_Events"`
+        Api_Key_Publish_Responses       string  `json:"API_KEY_PUBLISH_RESPONSES"`
 
         System_Hostname         string  `json:"SYSTEM_HOSTNAME"`
         System_Dns_Servers      []string        `json:"SYSTEM_DNS_SERVERS"`
