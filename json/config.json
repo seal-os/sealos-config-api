@@ -39,5 +39,6 @@
         "API_PROJECT_ID":       "",
         "API_PROJECT_DEVICE_ARCH":      "",
 
-        "API_DEVICE_UUID":      ""
+        "API_DEVICE_UUID":      "",
+        "API_DEVICE_NAME":      ""
 }
