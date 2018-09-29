@@ -38,9 +38,11 @@
         "API_USER_ID":          "",
         "API_PROJECT_ID":       "",
         "API_PROJECT_DEVICE_ARCH":      "",
+        "API_PROJECT_OS":       "",
 
         "API_DEVICE_UUID":      "",
         "API_DEVICE_NAME":      "",
         "API_DEVICE_STATIC_UUID":       "",
-        "API_DEVICE_NETWORK_UUID":      ""
+        "API_DEVICE_NETWORK_UUID":      "",
+        "API_DEVICE_PLATFORM":      ""
 }

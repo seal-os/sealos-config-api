@@ -52,6 +52,9 @@ type APISealOSConfig struct {
         Api_User_Id             string  `json:"API_USER_ID"`
         Api_Project_Id          string  `json:"API_PROJECT_ID"`
         Api_Project_Device_Arch string  `json:"API_PROJECT_DEVICE_ARCH"`
+        Api_Project_OS          string  `json:"API_PROJECT_OS"`
+
+        Api_Device_Platform     string  `json:"API_DEVICE_PLATFORM"`
 
         /* This Should be the same as /etc/machine-id file */
         Api_Device_UUID         string  `json:"API_DEVICE_UUID"`
