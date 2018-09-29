@@ -58,6 +58,10 @@ type APISealOSConfig struct {
 
         /* This is a local UUID auto generated and private */
         Api_Device_Static_UUID  string  `json:"API_DEVICE_STATIC_UUID"`
+
+        /* This is a Network UUID derived from Device UUID and can be
+         * used in untrusted networks */
+        Api_Device_Network_UUID  string  `json:"API_DEVICE_NETWORK_UUID"`
 }
 
 type APISealOSActionRequest struct {
