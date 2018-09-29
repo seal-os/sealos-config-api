@@ -41,4 +41,5 @@
 
         "API_DEVICE_UUID":      "",
         "API_DEVICE_NAME":      ""
+        "API_DEVICE_STATIC_UUID":      ""
 }

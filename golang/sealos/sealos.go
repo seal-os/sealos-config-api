@@ -55,6 +55,9 @@ type APISealOSConfig struct {
 
         /* This Should be the same as /etc/machine-id file */
         Api_Device_UUID         string  `json:"API_DEVICE_UUID"`
+
+        /* This is a local UUID auto generated and private */
+        Api_Device_Static_UUID  string  `json:"API_DEVICE_STATIC_UUID"`
 }
 
 type APISealOSActionRequest struct {
