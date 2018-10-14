@@ -54,7 +54,7 @@ type APISealOSConfig struct {
         Api_Project_Device_Arch string  `json:"API_PROJECT_DEVICE_ARCH"`
         Api_Project_OS          string  `json:"API_PROJECT_OS"`
 
-        Api_Device_Platform     string  `json:"API_DEVICE_PLATFORM"`
+        Api_Device_Product      string  `json:"API_DEVICE_PRODUCT"`
 
         Api_Device_OS_Release   string  `json:"API_DEVICE_OS_RELEASE"`
 
