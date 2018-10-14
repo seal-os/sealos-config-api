@@ -44,5 +44,6 @@
         "API_DEVICE_NAME":      "",
         "API_DEVICE_STATIC_UUID":       "",
         "API_DEVICE_NETWORK_UUID":      "",
-        "API_DEVICE_PLATFORM":      ""
+        "API_DEVICE_PLATFORM":          "",
+        "API_DEVICE_OS_RELEASE":        ""
 }
