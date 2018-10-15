@@ -2,6 +2,7 @@
         "API_USER_EMAIL":       "",
         "API_PROJECT_NAME":     "",
         "API_KEY_DEVICES":      "",
+        "API_KEY_APP":          "",
         "API_KEY_SUBSCRIBE_EVENTS":     "",
         "API_KEY_PUBLISH_RESPONSES":    "",
         "SYSTEM_HOSTNAME":      "",
