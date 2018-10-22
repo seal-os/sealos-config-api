@@ -69,7 +69,7 @@ type APISealOSConfig struct {
          * used in untrusted networks */
         Api_Device_Network_UUID string  `json:"API_DEVICE_NETWORK_UUID"`
 
-        Api_Device_Production   bool    `json:"API_DEVICE_Production"`
+        Api_Device_Production   bool    `json:"API_DEVICE_PRODUCTION"`
 }
 
 type APISealOSActionRequest struct {
