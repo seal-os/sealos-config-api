@@ -55,7 +55,7 @@ type APISealOSConfig struct {
         Api_Project_Device_Arch string  `json:"API_PROJECT_DEVICE_ARCH"`
         Api_Project_OS          string  `json:"API_PROJECT_OS"`
 
-        Api_Device_Product      string  `json:"API_DEVICE_PRODUCT"`
+        Api_Device_Vendor       string  `json:"API_DEVICE_VENDOR"`
 
         Api_Device_OS_Release   string  `json:"API_DEVICE_OS_RELEASE"`
 
@@ -67,7 +67,9 @@ type APISealOSConfig struct {
 
         /* This is a Network UUID derived from Device UUID and can be
          * used in untrusted networks */
-        Api_Device_Network_UUID  string  `json:"API_DEVICE_NETWORK_UUID"`
+        Api_Device_Network_UUID string  `json:"API_DEVICE_NETWORK_UUID"`
+
+        Api_Device_Production   bool    `json:"API_DEVICE_Production"`
 }
 
 type APISealOSActionRequest struct {
