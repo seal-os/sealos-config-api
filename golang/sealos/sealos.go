@@ -65,9 +65,18 @@ type APISealOSConfig struct {
         /* This is a local UUID auto generated and private */
         Api_Device_Static_UUID  string  `json:"API_DEVICE_STATIC_UUID"`
 
-        /* This is a Network UUID derived from Device UUID and can be
-         * used in untrusted networks */
+        /*
+         * This is a Network UUID derived from Device UUID and can be
+         * used in untrusted networks
+         */
         Api_Device_Network_UUID string  `json:"API_DEVICE_NETWORK_UUID"`
+
+        /*
+         * This is the MQTT Client UUID derived from Device UUID and can be
+         * used to construct MQTT TOPICS, channels or in any
+         * Publish/Subscribe Mechanism
+         */
+        Api_Device_Mqtt_UUID    string  `json:"API_DEVICE_MQTT_UUID"`
 
         Api_Device_Production   bool    `json:"API_DEVICE_PRODUCTION"`
 }
