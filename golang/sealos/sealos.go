@@ -62,21 +62,22 @@ type APISealOSConfig struct {
         /* This Should be the same as /etc/machine-id file */
         Api_Device_UUID         string  `json:"API_DEVICE_UUID"`
 
-        /* This is a local UUID auto generated and private */
+        /* This is a local UUID auto generated and private to IONOID */
         Api_Device_Static_UUID  string  `json:"API_DEVICE_STATIC_UUID"`
 
         /*
          * This is a Network UUID derived from Device UUID and can be
-         * used in untrusted networks
+         * used in untrusted networks to connects to services on
+         * Devices.
          */
         Api_Device_Network_UUID string  `json:"API_DEVICE_NETWORK_UUID"`
 
         /*
-         * This is the MQTT Client UUID derived from Device UUID and can be
-         * used to construct MQTT TOPICS, channels or in any
+         * This is the M2M Client UUID derived from Device UUID and can be
+         * used to construct M2M2 HTTP MQTT TOPICS, channels or in any
          * Publish/Subscribe Mechanism
          */
-        Api_Device_Mqtt_UUID    string  `json:"API_DEVICE_MQTT_UUID"`
+        Api_Device_M2M_UUID     string  `json:"API_DEVICE_M2M_UUID"`
 
         Api_Device_Production   bool    `json:"API_DEVICE_PRODUCTION"`
 }
