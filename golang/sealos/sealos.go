@@ -81,7 +81,7 @@ type APISealOSConfig struct {
 
         Api_Device_Production   bool    `json:"API_DEVICE_PRODUCTION"`
 
-        Api_Project_Environment []string        `json:"API_PROJECT_ENVIRONMENT"`
+        Api_Project_Environment map[string]string        `json:"API_PROJECT_ENVIRONMENT"`
 }
 
 type APISealOSActionRequest struct {

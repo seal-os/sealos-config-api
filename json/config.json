@@ -2,9 +2,9 @@
         "API_USER_EMAIL":       "",
         "API_PROJECT_NAME":     "",
 
-        "API_PROJECT_ENVIRONMENT": [
+        "API_PROJECT_ENVIRONMENT": {
 
-        ],
+        },
 
         "API_KEY_DEVICES":      "",
         "API_KEY_APP":          "",
