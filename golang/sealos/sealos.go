@@ -80,6 +80,8 @@ type APISealOSConfig struct {
         Api_Device_M2M_UUID     string  `json:"API_DEVICE_M2M_UUID"`
 
         Api_Device_Production   bool    `json:"API_DEVICE_PRODUCTION"`
+
+        Api_Project_Environment []string        `json:"API_PROJECT_ENVIRONMENT"`
 }
 
 type APISealOSActionRequest struct {
