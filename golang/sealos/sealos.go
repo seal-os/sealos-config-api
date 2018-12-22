@@ -9,6 +9,7 @@ const (
         SealOSFactoryPath       = "/usr/lib/sealos-manager/factory/"
 )
 
+/* WIFI API do not use omitempty here */
 type APIWifi struct {
         SSID            string                  `json:"SSID"`
         Password        string                  `json:"PASSWORD"`
@@ -19,6 +20,7 @@ type APISystemNetwork struct {
         Wifi            APIWifi                 `json:"WIFI"`
 }
 
+/* SealOS Config .json file do not use omitempty here */
 type APISealOSConfig struct {
         Api_User_Email          string  `json:"API_USER_EMAIL"`
         Api_Project_Name        string  `json:"API_PROJECT_NAME"`
@@ -82,6 +84,8 @@ type APISealOSConfig struct {
         Api_Device_Production   bool    `json:"API_DEVICE_PRODUCTION"`
 
         Api_Project_Environment map[string]string        `json:"API_PROJECT_ENVIRONMENT"`
+
+        Api_Device_Manager_Version      string  `json:"API_DEVICE_MANAGER_VERSION"`
 }
 
 type APISealOSActionRequest struct {
