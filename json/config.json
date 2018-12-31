@@ -56,5 +56,7 @@
         "API_DEVICE_OS_RELEASE":        "",
         "API_DEVICE_PRODUCTION":        false,
 
+        "API_DEVICE_APPS_AUTO_LOG":     "true",
+
         "API_DEVICE_MANAGER_VERSION":  ""
 }

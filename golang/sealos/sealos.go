@@ -88,6 +88,11 @@ type APISealOSConfig struct {
          */
         Api_Device_Public_UUID  string  `json:"API_DEVICE_PUBLIC_UUID"`
 
+        /*
+           Auto Send Apps Logs when they start: true or false
+        */
+        Api_Device_Apps_Auto_Log        string  `json:"API_DEVICE_APPS_AUTO_LOG"`
+
         Api_Device_Production   bool    `json:"API_DEVICE_PRODUCTION"`
 
         Api_Project_Environment map[string]string        `json:"API_PROJECT_ENVIRONMENT"`
