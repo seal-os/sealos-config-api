@@ -76,10 +76,17 @@ type APISealOSConfig struct {
 
         /*
          * This is the M2M Client UUID derived from Device UUID and can be
-         * used to construct M2M2 HTTP MQTT TOPICS, channels or in any
+         * used to construct M2M HTTP MQTT TOPICS, channels or in any
          * Publish/Subscribe Mechanism
          */
         Api_Device_M2M_UUID     string  `json:"API_DEVICE_M2M_UUID"`
+
+        /*
+         * This is the Public UUID that can be used inside messages and
+         * shared with untrusted parties. Used to identify messages
+         * originated from a specific Device
+         */
+        Api_Device_Public_UUID  string  `json:"API_DEVICE_PUBLIC_UUID"`
 
         Api_Device_Production   bool    `json:"API_DEVICE_PRODUCTION"`
 
