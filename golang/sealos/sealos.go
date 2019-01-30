@@ -30,7 +30,6 @@ type APISealOSConfig struct {
         Api_Key_Subscribe_Events        string  `json:"API_KEY_SUBSCRIBE_EVENTS"`
         Api_Key_Publish_Responses       string  `json:"API_KEY_PUBLISH_RESPONSES"`
 
-        System_Hostname         string  `json:"SYSTEM_HOSTNAME"`
         System_Dns_Servers      []string        `json:"SYSTEM_DNS_SERVERS"`
         System_Ntp_Servers      []string        `json:"SYSTEM_NTP_SERVERS"`
         System_Network          APISystemNetwork        `json:"SYSTEM_NETWORK"`

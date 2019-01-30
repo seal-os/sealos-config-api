@@ -10,7 +10,6 @@
         "API_KEY_APP":          "",
         "API_KEY_SUBSCRIBE_EVENTS":     "",
         "API_KEY_PUBLISH_RESPONSES":    "",
-        "SYSTEM_HOSTNAME":      "",
         "SYSTEM_DNS_SERVERS": [
                 "8.8.8.8",
                 "8.8.4.4"
