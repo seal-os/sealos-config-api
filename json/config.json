@@ -23,7 +23,15 @@
                         "SSID": "",
                         "PASSWORD": "",
                         "SECURITY": ""
-                }
+                },
+                "WIFI_NETWORKS": [
+                        {
+                                "SSID": "",
+                                "PASSWORD": "",
+                                "SECURITY": "",
+                                "PRIORITY": ""
+                        }
+                ]
         },
         "SYSTEM_MANAGER_PORT":  0,
         "SYSTEM_LOG_STORAGE":   "persistent",
@@ -40,6 +48,7 @@
 
 
         "API_ENDPOINT_DEVICES": "",
+        "API_ORGANIZATION_ID":  "",
         "API_USER_ID":          "",
         "API_PROJECT_ID":       "",
         "API_PROJECT_DEVICE_ARCH":      "",
