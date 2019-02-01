@@ -7,7 +7,6 @@
         },
 
         "API_KEY_DEVICES":      "",
-        "API_KEY_APP":          "",
         "API_KEY_SUBSCRIBE_EVENTS":     "",
         "API_KEY_PUBLISH_RESPONSES":    "",
         "SYSTEM_DNS_SERVERS": [
@@ -33,6 +32,7 @@
                         }
                 ]
         },
+
         "SYSTEM_MANAGER_PORT":  0,
         "SYSTEM_LOG_STORAGE":   "persistent",
         "SYSTEM_LOG_LEVEL":     "",
@@ -48,7 +48,8 @@
 
 
         "API_ENDPOINT_DEVICES": "",
-        "API_ORGANIZATION_ID":  "",
+        "API_ACCOUNT_PLAN":     "",
+        "API_ORG_ID":           "",
         "API_USER_ID":          "",
         "API_PROJECT_ID":       "",
         "API_PROJECT_DEVICE_ARCH":      "",
@@ -63,6 +64,9 @@
         "API_DEVICE_VENDOR":            "",
         "API_DEVICE_OS_RELEASE":        "",
         "API_DEVICE_PRODUCTION":        false,
+
+        "API_DEVICE_TAGS": {
+        },
 
         "API_DEVICE_APPS_AUTO_LOG":     "true",
 

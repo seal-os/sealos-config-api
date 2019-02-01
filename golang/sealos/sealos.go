@@ -28,7 +28,6 @@ type APISealOSConfig struct {
         Api_Project_Name        string          `json:"API_PROJECT_NAME"`
         Api_Device_Name         string          `json:"API_DEVICE_NAME"`
         Api_Key_Devices         string          `json:"API_KEY_DEVICES"`
-        Api_Key_App             string          `json:"API_KEY_APP"`
         Api_Key_Subscribe_Events        string  `json:"API_KEY_SUBSCRIBE_EVENTS"`
         Api_Key_Publish_Responses       string  `json:"API_KEY_PUBLISH_RESPONSES"`
 
@@ -54,12 +53,13 @@ type APISealOSConfig struct {
         /* Internal configuration */
         Api_Endpoint_Devices    string  `json:"API_ENDPOINT_DEVICES"`
 
-        Api_Organizaton_Id      string  `json:"API_ORGANIZATION_ID"`
+        Api_Account_Plan        string  `json:"API_ACCOUNT_PLAN"`
+        Api_Org_Id              string  `json:"API_ORG_ID"`
+        Api_User_Id             string  `json:"API_USER_ID"`
+
         Api_Project_Id          string  `json:"API_PROJECT_ID"`
         Api_Project_Device_Arch string  `json:"API_PROJECT_DEVICE_ARCH"`
         Api_Project_OS          string  `json:"API_PROJECT_OS"`
-
-        Api_User_Id             string  `json:"API_USER_ID"`
 
         Api_Device_Vendor       string  `json:"API_DEVICE_VENDOR"`
 
@@ -91,6 +91,11 @@ type APISealOSConfig struct {
          * originated from a specific Device
          */
         Api_Device_Public_UUID  string  `json:"API_DEVICE_PUBLIC_UUID"`
+
+        /*
+           This is Tags that are applied to this Device
+        */
+        Api_Device_Tags         map[string]string       `json:"API_DEVICE_TAGS"`
 
         /*
            Auto Send Apps Logs when they start: true or false
