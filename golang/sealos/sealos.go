@@ -104,7 +104,8 @@ type APISealOSConfig struct {
 
         Api_Device_Production           bool    `json:"API_DEVICE_PRODUCTION"`
 
-        Api_Project_Environment         map[string]string        `json:"API_PROJECT_ENVIRONMENT"`
+        Api_Project_Env_Vars            map[string]string       `json:"API_PROJECT_ENV_VARS,omitempty"`
+        Api_Device_Env_Vars             map[string]string       `json:"API_DEVICE_ENV_VARS,omitempty"`
 
         Api_Device_Manager_Version      string  `json:"API_DEVICE_MANAGER_VERSION"`
 }
