@@ -2,6 +2,9 @@
         "API_USER_EMAIL":       "",
         "API_PROJECT_NAME":     "",
 
+        "API_PROJECT_DEVICE_TAGS": {
+        },
+
         "API_PROJECT_ENV_VARS": {
         },
 
@@ -68,9 +71,6 @@
         "API_DEVICE_VENDOR":            "",
         "API_DEVICE_OS_RELEASE":        "",
         "API_DEVICE_PRODUCTION":        false,
-
-        "API_DEVICE_TAGS": {
-        },
 
         "API_DEVICE_APPS_AUTO_LOG":     "true",
 

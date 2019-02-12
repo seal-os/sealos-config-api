@@ -95,17 +95,13 @@ type APISealOSConfig struct {
         Api_Device_Public_UUID  string  `json:"API_DEVICE_PUBLIC_UUID"`
 
         /*
-           This is Tags that are applied to this Device
-        */
-        Api_Device_Tags         map[string]string       `json:"API_DEVICE_TAGS"`
-
-        /*
            Auto Send Apps Logs when they start: true or false
         */
         Api_Device_Apps_Auto_Log        string  `json:"API_DEVICE_APPS_AUTO_LOG"`
 
         Api_Device_Production           bool    `json:"API_DEVICE_PRODUCTION"`
 
+        Api_Project_Device_Tags         map[string]string       `json:"API_PROJECT_DEVICE_TAGS,omitempty"`
         Api_Project_Env_Vars            map[string]string       `json:"API_PROJECT_ENV_VARS,omitempty"`
         Api_Device_Env_Vars             map[string]string       `json:"API_DEVICE_ENV_VARS,omitempty"`
 
