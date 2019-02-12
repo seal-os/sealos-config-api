@@ -51,7 +51,7 @@
 
         "API_ENDPOINT_DEVICES": "",
         "API_ACCOUNT_PLAN":     "",
-        "API_ORG_ID":           "",
+        "API_DEVICE_ORG_ID":    "",
         "API_USER_ID":          "",
         "API_PROJECT_ID":       "",
         "API_PROJECT_DEVICE_ARCH":      "",
