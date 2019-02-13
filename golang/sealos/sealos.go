@@ -54,7 +54,7 @@ type APISealOSConfig struct {
         Api_Endpoint_Devices    string  `json:"API_ENDPOINT_DEVICES"`
 
         Api_Account_Plan        string  `json:"API_ACCOUNT_PLAN"`
-        Api_Device_Org_Id       string  `json:"API_DEVICE_ORG_ID"`
+        Api_Resource_Org_Id     string  `json:"API_RESOURCE_ORG_ID"`
         Api_Org_Projects_Id     string  `json:"API_ORG_PROJECTS_ID,omitempty"`
         Api_Project_Id          string  `json:"API_PROJECT_ID"`
 
