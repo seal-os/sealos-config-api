@@ -12,12 +12,16 @@ const (
 /* WIFI API do not use omitempty here */
 type APIWifi struct {
         SSID            string                  `json:"SSID"`
+        Scan_SSID       int                     `json:"SCAN_SSID"`
         Password        string                  `json:"PASSWORD"`
         Security        string                  `json:"SECURITY"`
         Priority        int                     `json:"PRIORITY"`
+        Wep_TX_Keyidx   int                     `json:"WEP_TX_KEYIDX,omitempty"`
+        Wep_Key0        string                  `json:"WEP_KEY0,omitempty"`
 }
 
 type APISystemNetwork struct {
+        WifiCountry     string          `json:"WIFI_COUNTRY,omitempty"`
         Wifi            APIWifi         `json:"WIFI"`
         WifiNetworks    []APIWifi       `json:"WIFI_NETWORKS"`
 }
