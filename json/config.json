@@ -23,6 +23,7 @@
                 "time2.google.com"
         ],
         "SYSTEM_NETWORK": {
+                "WIFI_COUNTRY": "GB",
                 "WIFI": {
                         "SSID": "",
                         "PASSWORD": "",
@@ -31,9 +32,10 @@
                 "WIFI_NETWORKS": [
                         {
                                 "SSID": "",
+                                "SCAN_SSID": 0,
                                 "PASSWORD": "",
                                 "SECURITY": "",
-                                "PRIORITY": ""
+                                "PRIORITY": 0
                         }
                 ]
         },
