@@ -14,6 +14,7 @@ type APIWifi struct {
         SSID            string                  `json:"SSID"`
         Scan_SSID       int                     `json:"SCAN_SSID"`
         Password        string                  `json:"PASSWORD"`
+        Psk             string                  `json:"PSK"`
         Security        string                  `json:"SECURITY"`
         Priority        int                     `json:"PRIORITY"`
         Wep_TX_Keyidx   int                     `json:"WEP_TX_KEYIDX,omitempty"`
