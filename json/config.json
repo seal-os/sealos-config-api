@@ -14,10 +14,12 @@
         "API_KEY_DEVICES":      "",
         "API_KEY_SUBSCRIBE_EVENTS":     "",
         "API_KEY_PUBLISH_RESPONSES":    "",
+
         "SYSTEM_DNS_SERVERS": [
                 "8.8.8.8",
                 "8.8.4.4"
         ],
+
         "SYSTEM_NTP_SERVERS": [
                 "time1.google.com",
                 "time2.google.com"
@@ -55,10 +57,8 @@
 
 
         "API_ENDPOINT_DEVICES": "",
-        "API_ACCOUNT_PLAN":     "",
 
         "API_RESOURCE_ORG_ID":  "",
-        "API_ORG_PROJECTS_ID":  "",
         "API_PROJECT_ID":       "",
         "API_USER_ID":          "",
         "API_PROJECT_DEVICE_ARCH":      "",
