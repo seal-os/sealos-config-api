@@ -60,6 +60,7 @@
 
         "API_RESOURCE_ORG_ID":  "",
         "API_PROJECT_ID":       "",
+        "API_PROJECT_M2M_ID":   "",
         "API_USER_ID":          "",
         "API_PROJECT_DEVICE_ARCH":      "",
         "API_PROJECT_OS":       "",

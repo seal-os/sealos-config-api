@@ -60,6 +60,7 @@ type APISealOSConfig struct {
 
         Api_Resource_Org_Id     string  `json:"API_RESOURCE_ORG_ID"`
         Api_Project_Id          string  `json:"API_PROJECT_ID"`
+        Api_Project_M2M_Id      string  `json:"API_PROJECT_M2M_ID,omitempty"`
 
         Api_User_Id             string  `json:"API_USER_ID"`
 
