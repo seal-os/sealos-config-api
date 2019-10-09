@@ -9,6 +9,50 @@ const (
         SealOSFactoryPath       = "/usr/lib/sealos-manager/factory/"
 )
 
+type APIKeyHeader struct {
+        Alg                     string          `json:"Alg,omitempty"`
+        Typ                     string          `json:"Typ,omitempty"`
+}
+
+type APIKeyPayload struct {
+        /* Usage count of this current key */
+        Usage                   int64           `json:"Usage,omitempty"`
+
+        /* Age when the key/Access was generated */
+        Age                     int64           `json:"Age,omitempty"`
+
+        /* Expiration time of the key */
+        Exp                     int64           `json:"Exp,omitempty"`
+
+        /* Subject ID to access */
+        Sub                     string          `json:"Sub,omitempty"`
+
+        /* Subject ID to access */
+        Username                string          `json:"Username,omitempty"`
+
+        /* Subject ID to access */
+        ClientId                string          `json:"ClientId,omitempty"`
+
+        /* Access role on the subject is used in backend only */
+        Role                    string          `json:"Role,omitempty"`
+
+        /* Issuer */
+        Iss                     string          `json:"Iss,omitempty"`
+
+        /* Audiance: The ID or Project ID where this entity/device is registered */
+        Aud                     string          `json:"Aud,omitempty"`
+
+        /* True if this key is obsolete */
+        Obsoleted               bool            `json:"Obsoleted,omitempty"`
+}
+
+type APIKey struct {
+        Header                  APIKeyHeader    `json:"Header,omitempty"`
+        Payload                 APIKeyPayload   `json:"Payload,omitempty"`
+        Signature               string          `json:"Signature,omitempty"`
+        Key                     string          `json:"Key,omitempty"`
+}
+
 /* WIFI API do not use omitempty here */
 type APIWifi struct {
         SSID            string                  `json:"SSID"`
