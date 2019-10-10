@@ -73,7 +73,6 @@ type APISystemNetwork struct {
 
 /* SealOS Config .json file do not use omitempty here */
 type APISealOSConfig struct {
-        Api_User_Email          string          `json:"API_USER_EMAIL"`
         Api_Project_Name        string          `json:"API_PROJECT_NAME"`
         Api_Device_Name         string          `json:"API_DEVICE_NAME"`
         Api_Key_Devices         string          `json:"API_KEY_DEVICES"`
@@ -105,6 +104,7 @@ type APISealOSConfig struct {
         Api_Resource_Org_Id     string  `json:"API_RESOURCE_ORG_ID"`
         Api_Project_Id          string  `json:"API_PROJECT_ID"`
         Api_Project_M2M_Id      string  `json:"API_PROJECT_M2M_ID,omitempty"`
+        Api_Project_Network_Id  string  `json:"API_PROJECT_NETWORK_ID,omitempty"`
 
         Api_User_Id             string  `json:"API_USER_ID"`
 
