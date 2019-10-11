@@ -63,6 +63,7 @@ type APIWifi struct {
         Priority        int                     `json:"PRIORITY"`
         Wep_TX_Keyidx   int                     `json:"WEP_TX_KEYIDX,omitempty"`
         Wep_Key0        string                  `json:"WEP_KEY0,omitempty"`
+        Fallback        string                  `json:"Fallback,omitempty"`
 }
 
 type APISystemNetwork struct {
