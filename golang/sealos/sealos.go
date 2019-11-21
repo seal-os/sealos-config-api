@@ -1,13 +1,8 @@
 /*
-   Copyright (c) 2018 Open Devices. All rights reserved.
+   Copyright (c) 2019 Open Devices. All rights reserved.
 */
 
 package sealos
-
-const (
-        SealOSManagerPath       = "/usr/lib/sealos-manager/"
-        SealOSFactoryPath       = "/usr/lib/sealos-manager/factory/"
-)
 
 type APIKeyHeader struct {
         Alg                     string          `json:"Alg,omitempty"`
@@ -16,31 +11,48 @@ type APIKeyHeader struct {
 
 type APIKeyPayload struct {
         /* Usage count of this current key */
-        Usage                   int64           `json:"Usage,omitempty"`
+        Usage_Count             int64           `json:"usage_count,omitempty"`
 
         /* Age when the key/Access was generated */
-        Age                     int64           `json:"Age,omitempty"`
+        Age                     int64           `json:"age,omitempty"`
+
+        /*
+           Token/Key Use: refresh/access
+         */
+        Token_Use               string          `json:"token_use,omitempty"`
 
         /* Expiration time of the key */
-        Exp                     int64           `json:"Exp,omitempty"`
+        Exp                     int64           `json:"exp,omitempty"`
 
         /* Subject ID to access */
-        Sub                     string          `json:"Sub,omitempty"`
+        Sub                     string          `json:"sub,omitempty"`
 
         /* Subject ID to access */
-        Username                string          `json:"Username,omitempty"`
+        Username                string          `json:"username,omitempty"`
 
         /* Subject ID to access */
-        ClientId                string          `json:"ClientId,omitempty"`
+        Client_id               string          `json:"client_id,omitempty"`
 
         /* Access role on the subject is used in backend only */
-        Role                    string          `json:"Role,omitempty"`
+        Role                    string          `json:"role,omitempty"`
 
         /* Issuer */
-        Iss                     string          `json:"Iss,omitempty"`
+        Iss                     string          `json:"iss,omitempty"`
+
+        /*
+           Ionoid Resource Access
+           res::$ORG_RESOURCE_ID::$PROJECT_ID
+         */
+        Ionoid_Res              string          `json:"ionoid_res,omitempty"`
+
+        /*
+           Ionoid Scope Access
+           scope::$STRING:: $STRING || $ID || $URL
+        */
+        Ionoid_Scope            string          `json:"ionoid_scope,omitempty"`
 
         /* Audiance: The ID or Project ID where this entity/device is registered */
-        Aud                     string          `json:"Aud,omitempty"`
+        Aud                     string          `json:"aud,omitempty"`
 
         /* True if this key is obsolete */
         Obsoleted               bool            `json:"Obsoleted,omitempty"`
@@ -56,6 +68,8 @@ type APIKey struct {
 /* WIFI API do not use omitempty here */
 type APIWifi struct {
         SSID            string                  `json:"SSID"`
+        BSS             string                  `json:"BSS,omitempty"`
+        Interface       string                  `json:"INTERFACE,omitempty"`
         Scan_SSID       int                     `json:"SCAN_SSID"`
         Password        string                  `json:"PASSWORD"`
         Psk             string                  `json:"PSK"`
@@ -63,7 +77,11 @@ type APIWifi struct {
         Priority        int                     `json:"PRIORITY"`
         Wep_TX_Keyidx   int                     `json:"WEP_TX_KEYIDX,omitempty"`
         Wep_Key0        string                  `json:"WEP_KEY0,omitempty"`
-        Fallback        string                  `json:"Fallback,omitempty"`
+        Fallback        string                  `json:"FALLBACK,omitempty"`
+        Associated      string                  `json:"ASSOCIATED,omitempty"`
+        Signal_Quality  uint                    `json:"SIGNAL_QUALITY,omitempty"`
+        RxRateS         string                  `json:"RXRATE_S,omitempty"`
+        TxRateS         string                  `json:"TXRATE_S,omitempty"`
 }
 
 type APISystemNetwork struct {
@@ -77,8 +95,15 @@ type APISealOSConfig struct {
         Api_Project_Name        string          `json:"API_PROJECT_NAME"`
         Api_Device_Name         string          `json:"API_DEVICE_NAME"`
         Api_Key_Devices         string          `json:"API_KEY_DEVICES"`
+
+        /* Api Endpoint Keys/Endpoints */
+        Api_Auth_Keys           []APIKey        `json:"ApiAuthKeys,omitempty"`
+
+        Api_Key_Publish_Events          string  `json:"API_KEY_PUBLISH_EVENTS"`
         Api_Key_Subscribe_Events        string  `json:"API_KEY_SUBSCRIBE_EVENTS"`
+
         Api_Key_Publish_Responses       string  `json:"API_KEY_PUBLISH_RESPONSES"`
+        Api_Key_Subscribe_Responses     string  `json:"API_KEY_SUBSCRIBE_RESPONSES"`
 
         System_Dns_Servers      []string        `json:"SYSTEM_DNS_SERVERS"`
         System_Ntp_Servers      []string        `json:"SYSTEM_NTP_SERVERS"`
@@ -115,6 +140,10 @@ type APISealOSConfig struct {
         Api_Device_Vendor       string  `json:"API_DEVICE_VENDOR"`
 
         Api_Device_OS_Release   string  `json:"API_DEVICE_OS_RELEASE"`
+
+        /* Device Platform Model */
+        Api_Device_Model        string  `json:"API_DEVICE_MODEL"`
+        Api_Device_Short_Model  string  `json:"API_DEVICE_SHORT_MODEL"`
 
         /* This Should be the same as /etc/machine-id file */
         Api_Device_UUID         string  `json:"API_DEVICE_UUID"`
