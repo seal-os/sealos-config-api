@@ -92,6 +92,8 @@ type APISystemNetwork struct {
 
 /* SealOS Config .json file do not use omitempty here */
 type APISealOSConfig struct {
+        Api_Unmanaged           bool            `json:"ApiUnmanaged"`
+
         Api_Project_Name        string          `json:"API_PROJECT_NAME"`
         Api_Device_Name         string          `json:"API_DEVICE_NAME"`
         Api_Key_Devices         string          `json:"API_KEY_DEVICES"`
@@ -99,11 +101,14 @@ type APISealOSConfig struct {
         /* Api Endpoint Keys/Endpoints */
         Api_Auth_Keys           []APIKey        `json:"ApiAuthKeys,omitempty"`
 
+        /* TODO: TO BE DELETED */
         Api_Key_Publish_Events          string  `json:"API_KEY_PUBLISH_EVENTS"`
         Api_Key_Subscribe_Events        string  `json:"API_KEY_SUBSCRIBE_EVENTS"`
 
         Api_Key_Publish_Responses       string  `json:"API_KEY_PUBLISH_RESPONSES"`
         Api_Key_Subscribe_Responses     string  `json:"API_KEY_SUBSCRIBE_RESPONSES"`
+
+        /* TODO: END OF TO BE DELETED */
 
         System_Dns_Servers      []string        `json:"SYSTEM_DNS_SERVERS"`
         System_Ntp_Servers      []string        `json:"SYSTEM_NTP_SERVERS"`
