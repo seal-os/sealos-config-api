@@ -1,5 +1,5 @@
 /*
-   Copyright (c) 2019 Open Devices. All rights reserved.
+   Copyright (c) 2020 Open Devices GmbH. All rights reserved.
 */
 
 package sealos
