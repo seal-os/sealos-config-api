@@ -84,10 +84,24 @@ type APIWifi struct {
         TxRateS         string                  `json:"TXRATE_S,omitempty"`
 }
 
+type APICellular struct {
+        Id              string                  `json:"ID,omitempty"`
+        Interface       string                  `json:"INTERFACE,omitempty"`
+        Autoconfig      bool                    `json:"AUTOCONFIG,omitempty"`
+        Autoconnect     bool                    `json:"AUTOCONNECT,omitempty"`
+        Apn             string                  `json:"APN,omitempty"`
+        Username        string                  `json:"USERNAME,omitempty"`
+        Password        string                  `json:"PASSWORD,omitempty"`
+        Pin             string                  `json:"PIN,omitempty"`
+        SimId           string                  `json:"SIM_ID,omitempty"`
+        SimOperatorId   string                  `json:"SIM_OPERATOR_ID,omitempty"`
+}
+
 type APISystemNetwork struct {
         WifiCountry     string          `json:"WIFI_COUNTRY,omitempty"`
         Wifi            APIWifi         `json:"WIFI"`
         WifiNetworks    []APIWifi       `json:"WIFI_NETWORKS"`
+        CellularNetworks []APICellular  `json:"CELLULAR_NETWORKS,omitempty"`
 }
 
 /* SealOS Config .json file do not use omitempty here */
