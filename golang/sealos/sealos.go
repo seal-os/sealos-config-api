@@ -85,7 +85,7 @@ type APIWifi struct {
 }
 
 type APICellular struct {
-        Id              string                  `json:"ID,omitempty"`
+        NetworkId       string                  `json:"NETWORK_ID,omitempty"`
         Interface       string                  `json:"INTERFACE,omitempty"`
         Autoconfig      bool                    `json:"AUTOCONFIG,omitempty"`
         Autoconnect     bool                    `json:"AUTOCONNECT,omitempty"`
