@@ -90,6 +90,8 @@ type APICellular struct {
         Autoconfig      bool                    `json:"AUTOCONFIG,omitempty"`
         Autoconnect     bool                    `json:"AUTOCONNECT,omitempty"`
         Apn             string                  `json:"APN,omitempty"`
+        Plan            string                  `json:"PLAN,omitempty"`
+        Usage           string                  `json:"USAGE,omitempty"`
         Username        string                  `json:"USERNAME,omitempty"`
         Password        string                  `json:"PASSWORD,omitempty"`
         Pin             string                  `json:"PIN,omitempty"`
