@@ -89,6 +89,7 @@ type APICellular struct {
 	Interface     string   `json:"INTERFACE,omitempty"`
 	Autoconfig    bool     `json:"AUTOCONFIG,omitempty"`
 	Autoconnect   bool     `json:"AUTOCONNECT,omitempty"`
+	Priority      int      `json:"PRIORITY,omitempty"`
 	Apn           string   `json:"APN,omitempty"`
 	Plan          string   `json:"PLAN,omitempty"`
 	Usage         string   `json:"USAGE,omitempty"`
