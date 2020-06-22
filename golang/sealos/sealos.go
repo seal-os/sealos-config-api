@@ -106,7 +106,8 @@ type Connectivity_Check struct {
 
 	/*
            Connectivity check interval in seconds, if less or equal 0
-           means connectivity check is disabled. Minimum value is 20secs.
+           means connectivity check is disabled.
+           Possible values are: 0, 60, 300, 600, 1200
         */
 	Interval int `json:"INTERVAL,omitempty"`
 
