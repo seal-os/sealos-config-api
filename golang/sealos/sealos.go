@@ -119,7 +119,7 @@ type Connectivity_Check struct {
 
            If less or qual 0 means reconfigure is disabled.
 
-           By default 0. Valid values: 0, 2, 4, 8
+           By default 0. Valid values: 0, 1, 2, 4, 8
 
 	   Reconfiguring network will run the commands in `MODEM_RESET`
 	   and will stop both Network Manager and Modem Manager then it
@@ -145,6 +145,8 @@ type Connectivity_Check struct {
 
            If less or equal 0 means endless, no limit
            0 means no limit
+
+           Possible values: 0, 1, 2, 4, 8
         */
 	Reconfigure_limit int `json:"RECONFIGURE_LIMIT,omitempty"`
 
