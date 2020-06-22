@@ -108,19 +108,24 @@ type Connectivity_Check struct {
            Connectivity check interval in seconds, if less or equal 0
            means connectivity check is disabled.
            Possible values are: 0, 60, 300, 600, 1200
+
+           By default 1200seconds.
         */
 	Interval int `json:"INTERVAL,omitempty"`
 
 	/*
-	   Connectivity check retries before reconfiguring network
-	   by default 4, reconfigure after 4 failed checks.
-	   0 or less means do not reconfigure
+           The number of failed connectivity checks required to reconfigure
+           the network including modems.
+
+           If less or qual 0 means reconfigure is disabled.
+
+           By default 0. Valid values: 0, 2, 4, 8
 
 	   Reconfiguring network will run the commands in `MODEM_RESET`
 	   and will stop both Network Manager and Modem Manager then it
 	   will restart them again.
 	*/
-	Retries int `json:"RETRIES,omitempty"`
+	Reconfigure_after int `json:"RECONFIGURE_AFTER,omitempty"`
 
 	/*
 	   Modem reset instructions, possible values separated by ',':
@@ -134,7 +139,7 @@ type Connectivity_Check struct {
 	*/
 	ModemReset string `json:"MODEM_RESET,omitempty"`
 
-	/* Number of maximum reconfigure retries before failing */
+	/* Number of maximum reconfigure retries before failing definitly */
 	Reconfigure_limit int `json:"RECONFIGURE_LIMIT,omitempty"`
 
 	/*
