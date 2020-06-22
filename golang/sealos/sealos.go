@@ -156,7 +156,8 @@ type Connectivity_Check struct {
            Which is: interval * (reconfigure_after + 1) in time seconds/minutes
 
 	   Possible values are:
-	        reboot
+                none    (No action) Do not take any action and service state will stay in failure.
+	        reboot  (
 	        reboot-force
 	        reboot-immediate
 	        poweroff
@@ -164,7 +165,7 @@ type Connectivity_Check struct {
 	        poweroff-immediate
 
 
-                For later:
+           For later:
 	        exit
 	        exit-force
 
