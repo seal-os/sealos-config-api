@@ -101,12 +101,60 @@ type APICellular struct {
 	Dns           []string `json:"DNS,omitempty"`
 }
 
+type Connectivity_Check struct {
+	Uri string `json:"URI,omitempty"`
+
+	/* Connectivity check interval in seconds */
+	Interval int `json:"INTERVAL,omitempty"`
+
+	/*
+	   Connectivity check retries before reconfiguring network
+	   by default 4, reconfigure after 4 failed checks.
+	   0 or less means do not reconfigure
+
+	   Reconfiguring network will run the commands in `MODEM_RESET`
+	   and will stop both Network Manager and Modem Manager then it
+	   will restart them again.
+	*/
+	Retries int `json:"RETRIES,omitempty"`
+
+	/*
+	   Modem reset instructions, possible values separated by ',':
+	   disable:                             Disable a given modem
+	   set-power-state-low/power-low        Set low power state in the modem
+	   set-power-state-off/power-off:       Power off the modem
+	   reset:                               Reset the modems
+
+	   Example:
+	        disable,power-off,reset
+	*/
+	ModemReset string `json:"MODEM_RESET,omitempty"`
+
+	/* Number of maximum reconfigure retries before failing */
+	Reconfigure_limit int `json:"RECONFIGURE_LIMIT,omitempty"`
+
+	/*
+	   Action to take when we reach maximum reconfiguration limit:
+	   Possible values are:
+	        reboot
+	        reboot-force
+	        reboot-immediate
+	        poweroff
+	        poweroff-force
+	        poweroff-immediate
+	        exit
+	        exit-force
+	*/
+	Failure_Action string `json:"FAILURE_ACTION,omitempty"`
+}
+
 type APISystemNetwork struct {
-	WifiCountry       string        `json:"WIFI_COUNTRY,omitempty"`
-	MacAddrProtection string        `json:"MAC_ADDR_PROTECTION,omitempty"`
-	Wifi              APIWifi       `json:"WIFI"`
-	WifiNetworks      []APIWifi     `json:"WIFI_NETWORKS"`
-	CellularNetworks  []APICellular `json:"CELLULAR_NETWORKS,omitempty"`
+	WifiCountry       string             `json:"WIFI_COUNTRY,omitempty"`
+	MacAddrProtection string             `json:"MAC_ADDR_PROTECTION,omitempty"`
+	Wifi              APIWifi            `json:"WIFI"`
+	WifiNetworks      []APIWifi          `json:"WIFI_NETWORKS"`
+	CellularNetworks  []APICellular      `json:"CELLULAR_NETWORKS,omitempty"`
+	ConnectivityCheck Connectivity_Check `json:"CONNECTIVITY_CHECK,omitempty"`
 }
 
 /* SealOS Config .json file do not use omitempty here */
@@ -142,10 +190,6 @@ type APISealOSConfig struct {
 	System_Log_Seal     string `json:"SYSTEM_LOG_SEAL"`
 
 	Kernel_Boot_Args string `json:"KERNEL_BOOT_ARGS"`
-
-	Runtime_Watchdog_Sec  string `json:"RUNTIME_WATCHDOG_SEC"`
-	Shutdown_Watchdog_Sec string `json:"SHUTDOWN_WATCHDOG_SEC"`
-	Watchdog_Device       string `json:"WATCHDOG_DEVICE"`
 
 	/* Internal configuration */
 	Api_Endpoint_Devices string `json:"API_ENDPOINT_DEVICES"`
