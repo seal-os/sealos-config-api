@@ -104,7 +104,10 @@ type APICellular struct {
 type Connectivity_Check struct {
 	Uri string `json:"URI,omitempty"`
 
-	/* Connectivity check interval in seconds */
+	/*
+           Connectivity check interval in seconds, if less or equal 0
+           means connectivity check is disabled. Minimum value is 20secs.
+        */
 	Interval int `json:"INTERVAL,omitempty"`
 
 	/*
