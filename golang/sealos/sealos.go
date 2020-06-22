@@ -139,7 +139,13 @@ type Connectivity_Check struct {
 	*/
 	ModemReset string `json:"MODEM_RESET,omitempty"`
 
-	/* Number of maximum reconfigure retries before failing definitly */
+	/*
+           Number of maximum reconfigure retries before failing definitly
+           and execute what is in Failure_Action
+
+           If less or equal 0 means endless, no limit
+           0 means no limit
+        */
 	Reconfigure_limit int `json:"RECONFIGURE_LIMIT,omitempty"`
 
 	/*
