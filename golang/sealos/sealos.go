@@ -152,6 +152,9 @@ type Connectivity_Check struct {
 
 	/*
 	   Action to take when we reach maximum reconfiguration limit:
+
+           Which is: interval * (reconfigure_after + 1) in time seconds/minutes
+
 	   Possible values are:
 	        reboot
 	        reboot-force
@@ -159,8 +162,13 @@ type Connectivity_Check struct {
 	        poweroff
 	        poweroff-force
 	        poweroff-immediate
+
+
+                For later:
 	        exit
 	        exit-force
+
+
 	*/
 	Failure_Action string `json:"FAILURE_ACTION,omitempty"`
 }
