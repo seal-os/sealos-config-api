@@ -156,13 +156,13 @@ type Connectivity_Check struct {
            Which is: interval * (reconfigure_after + 1) in time seconds/minutes
 
 	   Possible values are:
-                none    (No action) Do not take any action and service state will stay in failure.
-	        reboot  (
-	        reboot-force
-	        reboot-immediate
-	        poweroff
-	        poweroff-force
-	        poweroff-immediate
+                none    (No action) Do not take any action and service state may stay in failure. Default.
+	        reboot  (Normal reboot) Performs a normal reboot operation. 
+	        reboot-force (Force reboot) Performs a forced reboot operation by terminating all processes, should cause no dirty file systems.
+	        reboot-immediate (Immediate reboot) Similar to a hardware reboot, which might result in data loss.
+	        poweroff (Normal poweroff) Performs a normal poweroff operation.
+	        poweroff-force (Force poweroff) Performs a forced poweroff operation by terminating all processes.
+	        poweroff-immediate (Immediate poweroff) Similar to a hardware poweroff operation, which might result in data loss.
 
 
            For later:
