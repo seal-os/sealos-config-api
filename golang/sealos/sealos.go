@@ -105,25 +105,25 @@ type Connectivity_Check struct {
 	Uri string `json:"URI,omitempty"`
 
 	/*
-           Connectivity check interval in seconds, if less or equal 0
-           means connectivity check is disabled.
-           Possible values are: 0, 60, 300, 600, 1200
+	   Connectivity check interval in seconds, if less or equal 0
+	   means connectivity check is disabled.
+	   Possible values are: 0, 60, 300, 600, 1200
 
-           By default 1200seconds.
-        */
+	   By default 1200seconds.
+	*/
 	Interval int `json:"INTERVAL,omitempty"`
 
 	/*
-           The number of failed connectivity checks required to reconfigure
-           the network including modems.
+	           The number of failed connectivity checks required to reconfigure
+	           the network including modems.
 
-           If less or qual 0 means reconfigure is disabled.
+	           If less or qual 0 means reconfigure is disabled.
 
-           By default 0. Valid values: 0, 1, 2, 4, 8
+	           By default 0. Valid values: 0, 1, 2, 4, 8
 
-	   Reconfiguring network will run the commands in `MODEM_RESET`
-	   and will stop both Network Manager and Modem Manager then it
-	   will restart them again.
+		   Reconfiguring network will run the commands in `MODEM_RESET`
+		   and will stop both Network Manager and Modem Manager then it
+		   will restart them again.
 	*/
 	Reconfigure_after int `json:"RECONFIGURE_AFTER,omitempty"`
 
@@ -140,34 +140,34 @@ type Connectivity_Check struct {
 	ModemReset string `json:"MODEM_RESET,omitempty"`
 
 	/*
-           Number of maximum reconfigure retries before failing definitly
-           and execute what is in Failure_Action
+	   Number of maximum reconfigure retries before failing definitly
+	   and execute what is in Failure_Action
 
-           If less or equal 0 means endless, no limit
-           0 means no limit
+	   If less or equal 0 means endless, no limit
+	   0 means no limit
 
-           Possible values: 0, 1, 2, 4, 8
-        */
+	   Possible values: 0, 1, 2, 4, 8
+	*/
 	Reconfigure_limit int `json:"RECONFIGURE_LIMIT,omitempty"`
 
 	/*
-	   Action to take when we reach maximum reconfiguration limit:
+		   Action to take when we reach maximum reconfiguration limit:
 
-           Which is: interval * (reconfigure_after + 1) in time seconds/minutes
+	           Which is: interval * (reconfigure_after + 1) in time seconds/minutes
 
-	   Possible values are:
-                none    (No action) Do not take any action and service state may stay in failure. Default.
-	        reboot  (Normal reboot) Performs a normal reboot operation. 
-	        reboot-force (Force reboot) Performs a forced reboot operation by terminating all processes, should cause no dirty file systems.
-	        reboot-immediate (Immediate reboot) Similar to a hardware reboot, which might result in data loss.
-	        poweroff (Normal poweroff) Performs a normal poweroff operation.
-	        poweroff-force (Force poweroff) Performs a forced poweroff operation by terminating all processes.
-	        poweroff-immediate (Immediate poweroff) Similar to a hardware poweroff operation, which might result in data loss.
+		   Possible values are:
+	                none    (No action) Do not take any action and service state may stay in failure. Default.
+		        reboot  (Normal reboot) Performs a normal reboot operation.
+		        reboot-force (Force reboot) Performs a forced reboot operation by terminating all processes, should cause no dirty file systems.
+		        reboot-immediate (Immediate reboot) Similar to a hardware reboot, which might result in data loss.
+		        poweroff (Normal poweroff) Performs a normal poweroff operation.
+		        poweroff-force (Force poweroff) Performs a forced poweroff operation by terminating all processes.
+		        poweroff-immediate (Immediate poweroff) Similar to a hardware poweroff operation, which might result in data loss.
 
 
-           For later:
-	        exit
-	        exit-force
+	           For later:
+		        exit
+		        exit-force
 
 
 	*/
@@ -181,6 +181,12 @@ type APISystemNetwork struct {
 	WifiNetworks      []APIWifi          `json:"WIFI_NETWORKS"`
 	CellularNetworks  []APICellular      `json:"CELLULAR_NETWORKS,omitempty"`
 	ConnectivityCheck Connectivity_Check `json:"CONNECTIVITY_CHECK,omitempty"`
+}
+
+/* System and Apps deployment settings */
+type APIDeploymentSettings struct {
+	App_Dual_AB       string `json:"APP_DUAL_AB,omitempty"`
+	App_Delta_Updates string `json:"APP_DELTA_UPDATES,omitempty"`
 }
 
 /* SealOS Config .json file do not use omitempty here */
@@ -206,6 +212,8 @@ type APISealOSConfig struct {
 	System_Dns_Servers []string         `json:"SYSTEM_DNS_SERVERS"`
 	System_Ntp_Servers []string         `json:"SYSTEM_NTP_SERVERS"`
 	System_Network     APISystemNetwork `json:"SYSTEM_NETWORK"`
+
+	Deployment_Settings APIDeploymentSettings `json:"DEPLOYMENT_SETTINGS"`
 
 	System_Manager_Port int    `json:"SYSTEM_MANAGER_PORT"`
 	System_Log_Storage  string `json:"SYSTEM_LOG_STORAGE"`
