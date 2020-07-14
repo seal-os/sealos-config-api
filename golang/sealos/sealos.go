@@ -67,14 +67,14 @@ type APIKey struct {
 
 /* WIFI API do not use omitempty here */
 type APIWifi struct {
-	SSID           string `json:"SSID"`
+	SSID           string `json:"SSID,omitempty"`
 	BSS            string `json:"BSS,omitempty"`
 	Interface      string `json:"INTERFACE,omitempty"`
-	Scan_SSID      int    `json:"SCAN_SSID"`
-	Password       string `json:"PASSWORD"`
-	Psk            string `json:"PSK"`
-	Security       string `json:"SECURITY"`
-	Priority       int    `json:"PRIORITY"`
+	Scan_SSID      int    `json:"SCAN_SSID,omitempty"`
+	Password       string `json:"PASSWORD,omitempty"`
+	Psk            string `json:"PSK,omitempty"`
+	Security       string `json:"SECURITY,omitempty"`
+	Priority       int    `json:"PRIORITY,omitempty"`
 	Wep_TX_Keyidx  int    `json:"WEP_TX_KEYIDX,omitempty"`
 	Wep_Key0       string `json:"WEP_KEY0,omitempty"`
 	Fallback       string `json:"FALLBACK,omitempty"`
@@ -89,7 +89,7 @@ type APICellular struct {
 	Interface     string   `json:"INTERFACE,omitempty"`
 	Autoconfig    bool     `json:"AUTOCONFIG,omitempty"`
 	Autoconnect   bool     `json:"AUTOCONNECT,omitempty"`
-	Priority      int      `json:"PRIORITY"`
+	Priority      int      `json:"PRIORITY,omitempty"`
 	Apn           string   `json:"APN,omitempty"`
 	Plan          string   `json:"PLAN,omitempty"`
 	Usage         string   `json:"USAGE,omitempty"`
@@ -177,8 +177,8 @@ type Connectivity_Check struct {
 type APISystemNetwork struct {
 	WifiCountry       string             `json:"WIFI_COUNTRY,omitempty"`
 	MacAddrProtection string             `json:"MAC_ADDR_PROTECTION,omitempty"`
-	Wifi              APIWifi            `json:"WIFI"`
-	WifiNetworks      []APIWifi          `json:"WIFI_NETWORKS"`
+	Wifi              APIWifi            `json:"WIFI,omitempty"`
+	WifiNetworks      []APIWifi          `json:"WIFI_NETWORKS,omitempty"`
 	CellularNetworks  []APICellular      `json:"CELLULAR_NETWORKS,omitempty"`
 	ConnectivityCheck Connectivity_Check `json:"CONNECTIVITY_CHECK,omitempty"`
 }
