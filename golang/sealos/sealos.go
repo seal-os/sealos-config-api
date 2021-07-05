@@ -85,7 +85,9 @@ type APIWifi struct {
 }
 
 type APICellular struct {
-	NetworkId     string   `json:"NETWORK_ID,omitempty"`
+	/* Network ID as set in the config file */
+	NetworkId string `json:"NETWORK_ID,omitempty"`
+	/* Interface to be used */
 	Interface     string   `json:"INTERFACE,omitempty"`
 	Autoconfig    bool     `json:"AUTOCONFIG,omitempty"`
 	Autoconnect   bool     `json:"AUTOCONNECT,omitempty"`
@@ -134,14 +136,14 @@ type Connectivity_Check struct {
 	   set-power-state-off/power-off:       Power off the modem
 	   reset:                               Reset the modems
 
-	   Example:
+	   Example of multiple combination:
 	        disable,power-off,reset
 	*/
 	ModemReset string `json:"MODEM_RESET,omitempty"`
 
 	/*
 	   Number of maximum reconfigure retries before failing definitly
-	   and execute what is in Failure_Action
+	   and execute what the Failure_Action points to.
 
 	   If less or equal 0 means endless, no limit
 	   0 means no limit
