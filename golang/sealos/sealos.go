@@ -114,16 +114,16 @@ type Connectivity_Check struct {
 	Interval int `json:"INTERVAL,omitempty"`
 
 	/*
-	           The number of failed connectivity checks required to reconfigure
-	           the network including modems.
+		           The number of failed connectivity checks required to reconfigure
+		           the network including modems.
 
-	           If less or qual 0 means reconfigure is disabled.
+		           If less or qual 0 means reconfigure is disabled.
 
-	           By default 0. Valid values: 0, 1, 2, 4, 8
+		           By default 0. Valid values: 0, 1, 2, 4, 8
 
-		   Reconfiguring network will run the commands in `MODEM_RESET`
-		   and will stop both Network Manager and Modem Manager then it
-		   will restart them again.
+			   Reconfiguring network will run the commands in `MODEM_RESET`
+			   and will stop both Network Manager and Modem Manager then it
+			   will restart them again.
 	*/
 	Reconfigure_after int `json:"RECONFIGURE_AFTER,omitempty"`
 
@@ -151,23 +151,23 @@ type Connectivity_Check struct {
 	Reconfigure_limit int `json:"RECONFIGURE_LIMIT,omitempty"`
 
 	/*
-		   Action to take when we reach maximum reconfiguration limit:
+			   Action to take when we reach maximum reconfiguration limit:
 
-	           Which is: interval * (reconfigure_after + 1) in time seconds/minutes
+		           Which is: interval * (reconfigure_after + 1) in time seconds/minutes
 
-		   Possible values are:
-	                none    (No action) Do not take any action and service state may stay in failure. Default.
-		        reboot  (Normal reboot) Performs a normal reboot operation.
-		        reboot-force (Force reboot) Performs a forced reboot operation by terminating all processes, should cause no dirty file systems.
-		        reboot-immediate (Immediate reboot) Similar to a hardware reboot, which might result in data loss.
-		        poweroff (Normal poweroff) Performs a normal poweroff operation.
-		        poweroff-force (Force poweroff) Performs a forced poweroff operation by terminating all processes.
-		        poweroff-immediate (Immediate poweroff) Similar to a hardware poweroff operation, which might result in data loss.
+			   Possible values are:
+		                none    (No action) Do not take any action and service state may stay in failure. Default.
+			        reboot  (Normal reboot) Performs a normal reboot operation.
+			        reboot-force (Force reboot) Performs a forced reboot operation by terminating all processes, should cause no dirty file systems.
+			        reboot-immediate (Immediate reboot) Similar to a hardware reboot, which might result in data loss.
+			        poweroff (Normal poweroff) Performs a normal poweroff operation.
+			        poweroff-force (Force poweroff) Performs a forced poweroff operation by terminating all processes.
+			        poweroff-immediate (Immediate poweroff) Similar to a hardware poweroff operation, which might result in data loss.
 
 
-	           For later:
-		        exit
-		        exit-force
+		           For later:
+			        exit
+			        exit-force
 
 
 	*/
